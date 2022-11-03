@@ -88,7 +88,7 @@
                                 <h6>@product.Name</h6>
                             </div>
                             <div class="price">
-                                <span class="text-black-50">Add to cart</span>
+                                <a asp-controller="home" asp-action="AddBasket"  asp-route-id="@product.Id"  id="add-to-cart" ><span class="text-black-50">Add to cart</span></a>
                                 <span class="text-black-50">$@product.Price</span>
                             </div>
                         </div>
