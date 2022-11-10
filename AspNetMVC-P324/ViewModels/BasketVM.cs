@@ -6,6 +6,6 @@ namespace AspNetMVC_P324.ViewModels
     {
         public List<BasketCookieVM> BasketCookieVM { get; set; }        
         public double TotalPrice { get; set; }
-         public List<Product> Products { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
