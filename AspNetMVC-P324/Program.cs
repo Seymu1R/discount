@@ -1,4 +1,5 @@
 using AspNetMVC_P324.DAL;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace AspNetMVC_P324
@@ -18,6 +19,19 @@ namespace AspNetMVC_P324
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+
+                app.UseExceptionHandler("/Error");
+
+            }
+            app.UseStatusCodePagesWithReExecute("/Eror/Error1", "?code={0}");
+
 
             app.UseEndpoints(endpoints => {
                 
